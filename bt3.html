@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isFibonacci(num) {
+            var a = 1, b = 0, temp;
+            var number = num;
+            if (number == 0){
+                return true
+            }
+            while (num >= 0) {
+                temp = a;
+                a = a + b;
+                b = temp;
+                num--;
+                if(number == b){
+                    break;
+                }
+            }
+            if (number == b){
+                return  ( "Nằm trong dãy isFibonacci");
+            }
+            else{
+                return ( "Không nằm trong dãy isFibonacci");
+            }
+         }
+          var myInput = parseInt(prompt("Nhập số : "));
+        alert(isFibonacci(myInput))
+    </script>
+</body>
+
+</html>
